@@ -23,6 +23,7 @@ const Register = () => {
         .createUserWithEmailAndPassword(email, password);
 
       console.log(`userCredential`, userCredential);
+      console.log("Ви успішно зареєструвались!");
     } catch (error) {
       console.log("error", error.response);
     }
@@ -56,9 +57,9 @@ const Register = () => {
           value={value.password}
         />
         <Button variant="contained" color="primary" type="submit">
-          Зарегистрироватся
+          Зареєструватись
         </Button>
-        <Link to="/login">войти</Link>
+        <Link to="/login">Зайти</Link>
       </Form>
     </RegisterContainer>
   );

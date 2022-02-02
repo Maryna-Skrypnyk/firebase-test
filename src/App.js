@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<div>Loading ......</div>}>{routing}</Suspense>
+      <Suspense fallback={<div>Loading...</div>}>{routing}</Suspense>
       <button
         onClick={() => {
           firebase
@@ -20,14 +20,14 @@ function App() {
             .signOut()
             .then(() => {
               // Sign-out successful.
-              console.log("вы успешно вышли");
+              console.log("Ви успішно вийшли!");
             })
             .catch((error) => {
               // An error happened.
             });
         }}
       >
-        выйти
+        Выйти
       </button>
     </>
   );

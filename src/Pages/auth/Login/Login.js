@@ -24,6 +24,7 @@ const Login = () => {
         .signInWithEmailAndPassword(email, password);
 
       console.log(`userCredential`, userCredential);
+      console.log("Успішний вхід!");
     } catch (error) {
       console.log("error", error.response);
     }
@@ -31,6 +32,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     signInUser(value);
   };
 
@@ -56,9 +58,9 @@ const Login = () => {
           value={value.password}
         />
         <Button variant="contained" color="primary" type="submit">
-          Войти
+          Зайти
         </Button>
-        <Link to="/register">зарегистрироватся</Link>
+        <Link to="/register">Зареєструватись</Link>
         <DropDownMenu />
       </Form>
     </LoginContainer>

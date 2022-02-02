@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 // import Login from "../Pages/auth/Login/Login";
 // import Register from "../Pages/auth/Register/Register";
 // import Menu from "../Pages/menu/Menu";
@@ -30,7 +30,7 @@ export const useRouter = (isAuthentication) => {
         <Route path="/menu/:id">
           <Some />
         </Route>
-        {/* <Redirect to="/menu" /> */}
+        <Redirect to="/menu" />
       </Switch>
     );
   }
@@ -42,7 +42,7 @@ export const useRouter = (isAuthentication) => {
       <Route path="/register">
         <RegisterLazy />
       </Route>
-      {/* <Redirect to="/login" /> */}
+      <Redirect to="/login" />
     </Switch>
   );
 };
